@@ -1,5 +1,3 @@
-//+build !linux,!darwin,!dragonfly,!freebsd,!netbsd,!openbsd,!solaris darwin,arm64 !amd64,!arm64,!mips64x,!ppc64x
-
 package starlark
 
 // generic Int implementation as a union

@@ -83,7 +83,6 @@ import (
 	"fmt"
 	"math"
 	"math/big"
-	debugpkg "runtime/debug"
 	"unsafe"
 
 	"go.starlark.net/syntax"
@@ -216,7 +215,7 @@ func DecodeProgram(data []byte) (_ *Program, err error) {
 	}
 	defer func() {
 		if x := recover(); x != nil {
-			debugpkg.PrintStack()
+			// debugpkg.PrintStack()
 			err = fmt.Errorf("internal error while decoding program: %v", x)
 		}
 	}()
